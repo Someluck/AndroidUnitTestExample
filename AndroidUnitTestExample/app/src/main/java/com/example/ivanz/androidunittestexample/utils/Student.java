@@ -45,6 +45,4 @@ public class Student implements IStudent {
     public boolean isGoesOnAllPairs() {
         return course>3;
     }
-
-
 }
