@@ -12,6 +12,9 @@ import com.google.api.server.spi.config.ApiNamespace;
 
 import javax.inject.Named;
 
+import by.someluck.HttpClient;
+
+
 /**
  * An endpoint class we are exposing
  */
@@ -26,14 +29,13 @@ import javax.inject.Named;
 )
 public class MyEndpoint {
 
-    /**
-     * A simple endpoint method that takes a name and says Hi back
-     */
-    @ApiMethod(name = "sayHi")
-    public MyBean sayHi(@Named("name") String name) {
-        MyBean response = new MyBean();
-        response.setData("Hi, " + name);
+    public static final String FOOTBALL_DATA ="http://api.football-data.org/v1/competitions/?season=2016";
 
+    @ApiMethod(name = "getFootballData")
+    public MyBean getFootballData(){
+        MyBean response = new MyBean();
+        String data = HttpClient.get(FOOTBALL_DATA);
+        response.setData(data);
         return response;
     }
 

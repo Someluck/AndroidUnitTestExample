@@ -10,7 +10,7 @@ import java.net.URL;
 
 public class HttpClient {
 
-    public String get(String url) {
+    public static String get(String url) {
         String response = null;
         try{
             URL reqUrl = new URL(url);
