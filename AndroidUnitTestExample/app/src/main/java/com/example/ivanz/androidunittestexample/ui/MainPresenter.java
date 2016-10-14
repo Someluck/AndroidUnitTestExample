@@ -42,7 +42,7 @@ public class MainPresenter implements Contract.Presenter {
                    notifyError(e);
                 }
             }
-        });
+        }).start();
     }
 
     private void notifyResponse(final String response) {

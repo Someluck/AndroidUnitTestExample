@@ -17,7 +17,7 @@ import java.io.IOException;
 
 public class ApiManager {
 
-    public static final String APP_ENGINE_BASE_URL = "localhost:8080";
+    public static final String APP_ENGINE_BASE_URL = "http://127.0.0.1:8080";
 
     private static ApiManager sInstance;
     private MyApi appEngineApi;
@@ -35,7 +35,7 @@ public class ApiManager {
     public MyApi myApi() {
         if (appEngineApi == null) {
             MyApi.Builder builder = new MyApi.Builder(AndroidHttp.newCompatibleTransport(), JacksonFactory.getDefaultInstance(), null)
-                    .setApplicationName(BuildConfig.APPLICATION_NAME)
+                    .setApplicationName(BuildConfig.APPLICATION_ID)
                     .setRootUrl(APP_ENGINE_BASE_URL)
                     .setGoogleClientRequestInitializer(new GoogleClientRequestInitializer() {
                         @Override

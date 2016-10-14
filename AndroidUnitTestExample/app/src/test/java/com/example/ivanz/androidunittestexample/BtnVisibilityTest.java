@@ -2,6 +2,8 @@ package com.example.ivanz.androidunittestexample;
 
 import android.widget.Button;
 
+import com.example.ivanz.androidunittestexample.ui.MainActivity;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

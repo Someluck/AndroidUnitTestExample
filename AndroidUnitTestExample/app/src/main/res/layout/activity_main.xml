@@ -8,16 +8,16 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.ivanz.androidunittestexample.MainActivity">
+    tools:context="com.example.ivanz.androidunittestexample.ui.MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/responseView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Hello World!" />
 
-    <Button
-        android:id="@+id/btn"
+    <ProgressBar
+        android:id="@+id/progresBar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/visible_unvisible_button"/>
+        android:layout_height="match_parent" />
 </RelativeLayout>
